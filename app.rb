@@ -1,6 +1,6 @@
 require 'yaml'
 require 'socket'                            # Get sockets from stdlib
-config = YAML.load_file('config.yml')
+config = YAML.load_file("#{File.dirname(__FILE__)}/config.yml")
 
 server = TCPServer.new(config["http_port"]) # Socket to listen on port 2000
 loop {                         # Servers run forever
