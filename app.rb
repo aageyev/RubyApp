@@ -5,7 +5,7 @@ config = YAML.load_file("#{File.dirname(__FILE__)}/config.yml")
 server = TCPServer.new(config["http_port"]) # Socket to listen on port 2000
 loop {                         # Servers run forever
   client = server.accept       # Wait for a client to connect
-  resp = "<html>Hello!</html>"
+  resp = "Hello!"
   headers = ["HTTP/1.1 200 OK",
              "Date: Tue, 14 Dec 2010 10:48:45 GMT",
              "Server: Ruby",
